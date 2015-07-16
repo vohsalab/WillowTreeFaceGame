@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/playerLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:id="@+id/welcomeLabel"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="2dp"
+            android:textIsSelectable="false"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/playerNameLabel"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textSize="26sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scoreLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top score is:"
+            android:id="@+id/topScoreLabel"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="2dp"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/topScoreValueLabel"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textSize="26sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:id="@+id/imagesLayout"
+        android:focusableInTouchMode="false"
+        android:layout_above="@+id/scoreLayout"
+        android:layout_below="@+id/playerLayout">
+    </LinearLayout>
+</RelativeLayout>
