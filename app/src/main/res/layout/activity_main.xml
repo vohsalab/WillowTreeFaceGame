@@ -37,6 +37,36 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/quizLayout"
+
+        android:layout_below="@id/playerLayout"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/question_string"
+            android:layout_weight="1"
+
+            android:id="@+id/questionLabel"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Dummy Person?"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/nameLabel"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/scoreLayout">
@@ -44,8 +74,36 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Top score is:"
+            android:text="@string/topScoreLabel"
             android:id="@+id/topScoreLabel"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="2dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/topScoreValueLabel"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scoreLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/currentScoreLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/currentScoreLabel"
+            android:id="@+id/currentScoreLabel"
             android:layout_weight="1"
             android:gravity="right"
             android:layout_marginRight="2dp"
@@ -55,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/topScoreValueLabel"
+            android:id="@+id/currentScoreValueLabel"
             android:layout_weight="1"
             android:layout_marginLeft="2dp"
             android:textSize="26sp"/>
@@ -69,7 +127,32 @@
         android:layout_gravity="center"
         android:id="@+id/imagesLayout"
         android:focusableInTouchMode="false"
-        android:layout_above="@+id/scoreLayout"
-        android:layout_below="@+id/playerLayout">
+        android:layout_above="@+id/currentScoreLayout"
+        android:layout_below="@id/quizLayout"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstPhotoView"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/secondPhotoView"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/thirdPhotoView"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"/>
     </LinearLayout>
+
+
+
 </RelativeLayout>
