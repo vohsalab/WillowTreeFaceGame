@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("highScore", currentScoreValue);
             editor.apply();
             mHighScoreValueLabel.setText(currentScoreValue + "");
+            highScoreValue = currentScoreValue;
         }
         currentScoreValue = 0;
         playTheGame();
